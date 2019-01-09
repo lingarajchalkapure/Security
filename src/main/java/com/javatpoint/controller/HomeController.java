@@ -27,7 +27,7 @@ public class HomeController {
 	public String logoutPage(HttpServletRequest request,HttpServletResponse response) {
 	
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		System.err.println("authentication ======= "+authentication);
+		System.err.println("authentication modification ======= "+authentication);
 		
 		if (authentication!=null) {
 			new SecurityContextLogoutHandler().logout(request, response, authentication);
